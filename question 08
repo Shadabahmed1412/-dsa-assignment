@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void increment(int *a,int *b) {
+    // Complete this function  
+    int sum = *a+*b;
+    int sub;
+    sub = *a - *b>0 ? *a-*b: *b-*a;
+    *a = sum;
+    *b = sub;
+    
+    
+}
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+   // cin>>a>>b;
+    scanf("%d %d", &a, &b);
+    increment(pa, pb);
+    printf("%d\n%d", a, b);
+//cout<<a<<endl<<b;
+    return 0;
+}
